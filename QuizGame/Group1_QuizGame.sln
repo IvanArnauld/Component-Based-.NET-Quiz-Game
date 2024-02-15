@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32630.192
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuizGameGUIClient", "QuizGameGUIClient\QuizGameGUIClient.csproj", "{CCB18C68-6DAD-4FC7-9DD3-40F73479DE6F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuizGameLibrary", "QuizGameLibrary\QuizGameLibrary.csproj", "{41331283-6277-426A-AE76-9345B275DA46}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuizGameServiceHost", "QuizGameServiceHost\QuizGameServiceHost.csproj", "{92FAB3EF-8F1F-4D4C-9B51-BFE0E4D113FD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CCB18C68-6DAD-4FC7-9DD3-40F73479DE6F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CCB18C68-6DAD-4FC7-9DD3-40F73479DE6F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CCB18C68-6DAD-4FC7-9DD3-40F73479DE6F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CCB18C68-6DAD-4FC7-9DD3-40F73479DE6F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{41331283-6277-426A-AE76-9345B275DA46}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{41331283-6277-426A-AE76-9345B275DA46}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{41331283-6277-426A-AE76-9345B275DA46}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{41331283-6277-426A-AE76-9345B275DA46}.Release|Any CPU.Build.0 = Release|Any CPU
+		{92FAB3EF-8F1F-4D4C-9B51-BFE0E4D113FD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{92FAB3EF-8F1F-4D4C-9B51-BFE0E4D113FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{92FAB3EF-8F1F-4D4C-9B51-BFE0E4D113FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{92FAB3EF-8F1F-4D4C-9B51-BFE0E4D113FD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4943DAA9-531E-4241-802C-38C267C06E99}
+	EndGlobalSection
+EndGlobal

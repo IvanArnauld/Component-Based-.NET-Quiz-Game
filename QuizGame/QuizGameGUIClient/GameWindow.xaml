@@ -1,0 +1,43 @@
+﻿<Window x:Class="QuizGameGUIClient.GameWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:QuizGameGUIClient"
+        mc:Ignorable="d"
+        Title="GameWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="16*"/>
+            <ColumnDefinition Width="89*"/>
+            <ColumnDefinition Width="95*"/>
+        </Grid.ColumnDefinitions>
+        <Grid Grid.ColumnSpan="3">
+            <Grid.Background>
+                <ImageBrush ImageSource="/QuestionImage.jpg"/>
+            </Grid.Background>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="3*"/>
+                <ColumnDefinition Width="22*"/>
+                <ColumnDefinition Width="55*"/>
+            </Grid.ColumnDefinitions>
+            <Label Content="Testing the page" HorizontalAlignment="Left" Margin="64,52,0,0" VerticalAlignment="Top" Width="187" Grid.ColumnSpan="2" Grid.Column="1"/>
+            <Label x:Name="QuestionNumber_Label" Content="Question 1:" HorizontalAlignment="Left" Margin="64,108,0,0" VerticalAlignment="Top" Width="77" Grid.Column="1"/>
+            <TextBox x:Name="Question_TextBox" HorizontalAlignment="Left" Margin="141,108,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="400" Height="150" Grid.ColumnSpan="2" Grid.Column="1"/>
+            <TextBox x:Name="AnswerChoice_TextBox" HorizontalAlignment="Left" Margin="141,322,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="400" Height="26" Grid.ColumnSpan="2" Grid.Column="1" FontWeight="Normal" FontSize="14" FontFamily="Arial Black" TextChanged="AnswerChoice_TextBox_TextChanged"/>
+            <Label x:Name="Answer_Label" Content="Answer:" HorizontalAlignment="Left" Margin="59,322,0,0" VerticalAlignment="Top" Width="77" Grid.Column="1"/>
+            <Button x:Name="NextQuestion_Button" Content="Next Question" HorizontalAlignment="Center" Margin="0,373,0,0" VerticalAlignment="Top" Height="31" Width="92" Grid.Column="2" Click="NextQuestion_Button_Click"/>
+            <RadioButton x:Name="A_RadioButton" Grid.Column="1" Content="A" HorizontalAlignment="Left" Margin="158,286,0,0" VerticalAlignment="Top" GroupName="Answer_RadioButtonGroup" Checked="A_RadioButton_Checked"/>
+            <RadioButton x:Name="B_RadioButton" Grid.Column="2" Content="B" HorizontalAlignment="Left" Margin="10,286,0,0" VerticalAlignment="Top" GroupName="Answer_RadioButtonGroup" Checked="B_RadioButton_Checked"/>
+            <RadioButton x:Name="C_RadioButton" Grid.Column="2" Content="C" HorizontalAlignment="Left" Margin="70,286,0,0" VerticalAlignment="Top" GroupName="Answer_RadioButtonGroup" Checked="C_RadioButton_Checked"/>
+            <RadioButton x:Name="D_RadioButton" Grid.Column="2" Content="D" HorizontalAlignment="Left" Margin="136,286,0,0" VerticalAlignment="Top" GroupName="Answer_RadioButtonGroup" Checked="D_RadioButton_Checked"/>
+            <TextBlock x:Name="PlayerPoints_TextBlock" Grid.Column="2" HorizontalAlignment="Left" Height="35" Margin="275,16,0,0" TextWrapping="Wrap" Text="Player Name: 0 points" VerticalAlignment="Top" Width="215" FontSize="16"/>
+            <Button x:Name="SubmitAnswer_Button" Grid.Column="2" Content="Submit Answer" HorizontalAlignment="Left" Height="25" Margin="351,323,0,0" VerticalAlignment="Top" Width="93" Click="SubmitAnswer_Button_Click"/>
+            <Label x:Name="AnswerFeedback_Label" Grid.Column="2" Content="" HorizontalAlignment="Left" Height="50" Margin="46,354,0,0" VerticalAlignment="Top" Width="150" BorderBrush="Black" FontFamily="Arial Black" FontSize="14"/>
+            <ListBox x:Name="LeaderBoardListBox" Grid.Column="2" HorizontalAlignment="Left" Height="192" Margin="363,107,0,0" VerticalAlignment="Top" Width="150" d:ItemsSource="{d:SampleData ItemCount=5}" Background="#FFDCE2EE" Foreground="#FF0085CD" FontFamily="Cooper Black" FontSize="10"/>
+            <Label x:Name="LeaderBoard_Label" Grid.Column="2" Content="Leaderboard" HorizontalAlignment="Left" Margin="382,83,0,0" VerticalAlignment="Top" Width="112" Background="#FFDBE1ED" FontFamily="Cooper Black" Foreground="#FF0084CB"/>
+
+        </Grid>
+
+    </Grid>
+</Window>

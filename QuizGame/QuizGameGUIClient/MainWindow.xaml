@@ -1,0 +1,115 @@
+﻿<Window x:Class="QuizGameGUIClient.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:QuizGameGUIClient"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="/QuizImage.jpg"/>
+        </Grid.Background>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="21.028"/>
+            <ColumnDefinition Width="154.972"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="176"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="32"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="32"/>
+            <RowDefinition Height="128"/>
+            <RowDefinition Height="32"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="32"/>
+            <RowDefinition Height="32"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="32"/>
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Column="2" Grid.Row="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+            <Border Background="#000" BorderThickness="0" CornerRadius="16" Margin="0,8,0,0" Grid.Row="1"/>
+        </Grid>
+
+        <Grid Grid.Column="2" Grid.Row="2" Margin="0,32,0,0" Grid.RowSpan="2">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Label
+                FontSize="18"
+                Content="Players in Lobby:"
+                Margin="0,0,0,8"
+                Padding="0"
+                Grid.Row="0" Foreground="#FFF4BE3A" FontFamily="Broadway" HorizontalAlignment="Center"
+            />
+            <ListBox x:Name="PlayersInLobbyListBox" Grid.Row="1" Margin="0,0,0,4"/>
+            <Grid Grid.Row="2">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Label
+                    x:Name="WaitingForPlayersLabel"
+                    Grid.Column="0"
+                    FontSize="12"
+                    Content="Waiting for X more player(s)..."
+                    Padding="0"
+                    HorizontalContentAlignment="Left"
+                    Visibility="Hidden"
+                />
+                <Label
+                    x:Name="TotalPlayersInLobbyLabel"
+                    Grid.Column="1"
+                    FontSize="12"
+                    Content="Total: 0/8 player(s)"
+                    Padding="0"
+                    HorizontalContentAlignment="Right"
+                    Visibility="Hidden"
+                />
+            </Grid>
+        </Grid>
+
+        <Grid Grid.Column="2" Grid.Row="4" Margin="0,32,0,0" Grid.RowSpan="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition Width="16"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Label HorizontalAlignment="Center" VerticalAlignment="Center" Padding="0" Foreground="#FFF4BE3A" FontFamily="Broadway">Username:</Label>
+            <TextBox x:Name="UsernameTextBox" Grid.Column="3"/>
+        </Grid>
+
+        <Grid Grid.Column="2" Grid.Row="6" Margin="0,40,0,0" Grid.RowSpan="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="128"/>
+                <ColumnDefinition Width="32"/>
+                <ColumnDefinition Width="128"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Grid Grid.Column="1">
+                <Button x:Name="JoinGameLobbyButton" Click="JoinGameLobbyButton_Click">Join Game Lobby</Button>
+            </Grid>
+
+            <Grid Grid.Column="3">
+                <Button x:Name="StartGameButton" Click="StartGameButton_Click" Height="32" VerticalAlignment="Top">Start Game</Button>
+            </Grid>
+        </Grid>
+
+        <Label HorizontalAlignment="Center" VerticalAlignment="Top" Grid.Column="2" Grid.Row="9" Margin="0,13,0,0" Grid.RowSpan="2" Foreground="#FFF4BE3A">By: Agnita, Ivan and Dhanashri</Label>
+        <TextBlock x:Name="WaitingPlayers_TextBlock" HorizontalAlignment="Left" Height="15" Margin="0,12,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="232" FontFamily="Candara Light" Background="Black" Foreground="#FF4FFF02" Grid.ColumnSpan="3"/>
+    </Grid>
+</Window>
